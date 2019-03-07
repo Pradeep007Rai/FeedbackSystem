@@ -7,13 +7,17 @@ import { DialogData } from '../login-page.component';
     templateUrl: 'otp-popup.html',
   })
   export class OTPPopup {
-  
+  loading:boolean;
     constructor(
       public dialogRef: MatDialogRef<OTPPopup>,
       @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
   
     onNoClick(): void {
       this.dialogRef.close();
+    }
+    ngOnInit(): void {
+      this.loading = true;
+      setTimeout(()=>{ this.loading = false }, 5000);
     }
   
   }

@@ -16,3 +16,6 @@ table {
   .mat-stroked-button{
     width: 85%;
   }
+  mat-form-field  {
+    font-size: 30px !important;
+  }

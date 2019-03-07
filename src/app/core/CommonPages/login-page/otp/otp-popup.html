@@ -1,10 +1,18 @@
-<div mat-dialog-content>
-  <p>Enter OPT Send to phone No: {{data.phoneNo}}</p>
-  <mat-form-field>
-    <input matInput [(ngModel)]="data.OTP">
-  </mat-form-field>
+<div align="center" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+  <p>Sending OTP</p>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.OTP" cdkFocusInitial>Ok</button>
+<div *ngIf="!loading">
+    <div mat-dialog-content>
+        <p>Enter OPT Send to phone No: {{data.phoneNo}}</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter OTP</mat-label>
+          <input matInput [(ngModel)]="data.OPT" type="number" max="9999" min="0" minlength="4" maxlength="4" >
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button [mat-dialog-close]="data.OTP" cdkFocusInitial>Ok</button>
+      </div>
 </div>

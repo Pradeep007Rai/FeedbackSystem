@@ -37,4 +37,29 @@
           </div>
     </div>
   </div>
+  <div class="col-sm-6">
+      <div class="table-container">
+          <div class="mat-elevation-z8">
+              <div class="container ">
+                  <mat-form-field >
+                    <input matInput placeholder="RollNo" disabled>
+                  </mat-form-field>
+                  <mat-form-field >
+                      <input matInput placeholder="Name">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field >
+                        <input matInput placeholder="ContactNo">
+                      </mat-form-field>
+                      <mat-form-field >
+                          <textarea matInput placeholder="Address"></textarea>
+                        </mat-form-field>
+                  </div>
+            </div>
+      </div>
+  </div>
 </div>
