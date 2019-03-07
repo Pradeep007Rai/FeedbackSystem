@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { AdminDashBoardComponent } from './adminComponents/admin-dash-board/admin-dash-board.component';
-import { ManageStudentDetailComponent } from './adminComponents/manage-student-detail/manage-student-detail.component';
+import { ManageStudentDetailComponent } from './adminPages/manage-student-detail/manage-student-detail.component';
 
 const routes: Routes = [
   {

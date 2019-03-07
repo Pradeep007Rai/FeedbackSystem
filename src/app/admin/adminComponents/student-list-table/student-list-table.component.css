@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+  }
+  mat-form-field{
+      width: 35% !important;
+  }
+.table-container{
+    position: relative;
+    max-height: 400px;
+    overflow: auto;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .mat-stroked-button{
+    width: 85%;
+  }

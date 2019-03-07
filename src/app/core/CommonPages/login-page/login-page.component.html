@@ -1,10 +1,26 @@
-<div class="row">
-  <div class="col-sm-8">
-          <mat-form-field>
-              <input matInput type="text" placeholder="Clearable input" [(ngModel)]="value">
-              <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-              </button>
-            </mat-form-field>
-  </div>
-</div>
+
+    <mat-toolbar color="primary">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>FeedbackApp</span>
+        <div class="right-option">
+          <button mat-button>About</button>
+          <button mat-button>Contact</button>
+        </div>
+      </mat-toolbar>
+    
+    <div class="row">
+      <div class="col-sm-8">
+              <mat-form-field>
+                  <input matInput type="tel" pattern="[6789][0-9]{9}" minlength="10" maxlength="10" [(ngModel)]="phoneNo" placeholder="Enter Mobile No" [(ngModel)]="value">
+                  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </mat-form-field>
+      </div>
+      <div class="col-sm-8">
+              <button mat-button class="getOtp" type="submit" (click)="openDialog()"> Get Otp </button>
+      </div>
+    </div>

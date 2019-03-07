@@ -4,27 +4,17 @@ import { CommonModule } from '@angular/common';
 import { AdminNavComponent } from './adminComponents/admin-nav/admin-nav.component';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
-import { CoreModule } from '../core/core.module';
-import { MatListModule, MatIconModule, MatSidenavModule, MatButtonModule, MatToolbarModule } from '@angular/material';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatCardModule, MatGridListModule, MatMenuModule } from '@angular/material';
 import { AdminDashBoardComponent } from './adminComponents/admin-dash-board/admin-dash-board.component';
-import { ManageStudentDetailComponent } from './adminComponents/manage-student-detail/manage-student-detail.component';
+import { ManageStudentDetailComponent } from './adminPages/manage-student-detail/manage-student-detail.component';
+import { StudentListTableComponent } from './adminComponents/student-list-table/student-list-table.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  declarations: [AdminNavComponent, AdminComponent, AdminDashBoardComponent, ManageStudentDetailComponent],
+  declarations: [AdminNavComponent, AdminComponent, AdminDashBoardComponent, ManageStudentDetailComponent, StudentListTableComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatGridListModule,
-    MatMenuModule
+    MaterialModule
   ]
 })
 export class AdminModule { }

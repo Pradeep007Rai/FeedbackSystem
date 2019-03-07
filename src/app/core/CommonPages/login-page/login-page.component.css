@@ -1,5 +1,22 @@
 .row{
     position: absolute;
     left: 30%;
-    top: 10%;
+    top: 30%;
 }
+.getOtp{
+    width: 50%;
+}
+input{
+    width: 100%
+}
+.right-option{
+    position: absolute;
+    right: 10px;
+  }
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin-right: 0px;
+  }

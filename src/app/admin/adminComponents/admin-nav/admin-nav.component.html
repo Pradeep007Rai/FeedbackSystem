@@ -1,35 +1,50 @@
 <mat-toolbar color="primary">
-    <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="drawer.toggle()"
-      *ngIf="isHandset$ | async">
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
-    <span >FeedbackApp</span>
-  </mat-toolbar>
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>FeedbackApp</span>
+  <div class="right-option">
+    <button mat-button>About</button>
+    <button mat-button>Contact</button>
+  </div>
+</mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [position]="end"
-      [fixedTopGap]="65"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [position]="end" [fixedTopGap]="65"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['dashboard']"><h1 class="mat-body-strong">Dash Board</h1></a>
-      <a mat-list-item [routerLink]="['manageStudent']"><h1 class="mat-body-strong">Manage Student Details</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">Manage Class Details</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">Manage Teacher Detail</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">Manage Department Detail</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">View Teachers Progress</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">Manage FeedBack Form</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">Create New Feedback Form</h1></a>
-      <a mat-list-item href="#"><h1 class="mat-body-strong">Analysis Data</h1></a>
+      <a mat-list-item [routerLink]="['dashboard']">
+        <h1 class="mat-body-strong">Dash Board</h1>
+      </a>
+      <a mat-list-item [routerLink]="['manageStudent']">
+        <h1 class="mat-body-strong">Manage Student Details</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">Manage Class Details</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">Manage Teacher Detail</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">Manage Department Detail</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">View Teachers Progress</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">Manage FeedBack Form</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">Create New Feedback Form</h1>
+      </a>
+      <a mat-list-item href="#">
+        <h1 class="mat-body-strong">Analysis Data</h1>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-      <router-outlet></router-outlet>   
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

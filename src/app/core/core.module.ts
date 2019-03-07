@@ -9,31 +9,24 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatGridListModule, MatMenuModule, MatRippleModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { LoginPageComponent } from './CommonPages/login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
+import { OTPPopup } from './CommonPages/login-page/otp/otp-popup';
 
 @NgModule({
-  declarations: [PageNotFoundComponent, LoginPageComponent],
+  declarations: [PageNotFoundComponent, LoginPageComponent,OTPPopup],
   imports: [
     CommonModule,
     CoreRoutingModule,
     FormsModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRippleModule,
     BrowserAnimationsModule,
     CommonModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatGridListModule,
-    MatMenuModule
+    MaterialModule,
   ],
   exports:[
     RouterModule
+  ],
+  bootstrap:[
+    OTPPopup
   ]
 })
 export class CoreModule { }
