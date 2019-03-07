@@ -4,17 +4,17 @@ import { StudentDetail } from '../../student.model';
 
 
 const ELEMENT_DATA: StudentDetail[] = [
-  {rollNo: 1, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 2, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 3, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 4, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 5, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 6, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 7, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 8, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 9, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 10, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-  {rollNo: 11, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 1, name: 'Pradeep Kumar Rai', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 2, name: 'Junaid Rafik Shaikh', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 3, name: 'Raghuvir Sigh Rathore', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 4, name: 'Ranjit Kumar Roy', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 5, name: 'Subhashini Roy', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 6, name: 'Daizy Kumari', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 7, name: 'Trishla Kamra', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 8, name: 'Shreyas', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 9, name: 'Praveen Kumar Rai', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 10, name: 'Umesh Shinde', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+  {rollNo: 11, name: 'Sayali Shinde', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
   {rollNo: 12, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
   {rollNo: 13, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"}
 ];
@@ -39,13 +39,3 @@ export class StudentListTableComponent implements OnInit {
   }
 
 }
-
-
-// STUDENT_ID INT PRIMARY KEY ,
-// 	CLASS_ID INT ,
-// 	STUDENT_NAME VARCHAR(20) ,
-// 	GENDER VARCHAR(6) ,
-// 	DOB DATE ,
-// 	ADDRESS VARCHAR(100) ,
-// 	CONTACT VARCHAR(12) ,
-// 	IS_ACTIVE INT(1) ,
