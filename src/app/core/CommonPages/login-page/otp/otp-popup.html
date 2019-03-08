@@ -13,6 +13,6 @@
       </div>
       <div mat-dialog-actions>
         <button mat-button (click)="onNoClick()">Cancel</button>
-        <button mat-button [mat-dialog-close]="data.OTP" cdkFocusInitial>Ok</button>
+        <button mat-button [mat-dialog-close]="data.OTP" cdkFocusInitial (click)="wait()">Ok</button>
       </div>
 </div>

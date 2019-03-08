@@ -9,7 +9,7 @@ export class ManageClassDetailPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
+ngOnInit(){}
 
 }

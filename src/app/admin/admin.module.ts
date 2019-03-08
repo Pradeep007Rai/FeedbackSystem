@@ -16,13 +16,16 @@ import { CreateFeedBackFormPageComponent } from './adminPages/create-feed-back-f
 import { ViewTeachersProgressPageComponent } from './adminPages/view-teachers-progress-page/view-teachers-progress-page.component';
 import { DataAnalysisPageComponent } from './adminPages/data-analysis-page/data-analysis-page.component';
 import { PageNotFoundComponent } from './adminPages/page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdminNavComponent, AdminComponent, AdminDashBoardComponent, ManageStudentDetailComponent, StudentListTableComponent, ManageClassDetailPageComponent, ManageTeacherDetailPageComponent, ManageDepartmentDetailPageComponent, ManageFeedBackPageComponent, CreateFeedBackFormPageComponent, ViewTeachersProgressPageComponent, DataAnalysisPageComponent, PageNotFoundComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }
