@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
 import { StudentDetail } from '../../student.model';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { startWith, map } from 'rxjs/operators';
-import { stringify } from 'querystring';
-import { Data, Data, Data } from '@angular/router';
 
 
 @Component({
