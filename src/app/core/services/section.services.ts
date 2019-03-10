@@ -12,16 +12,9 @@ import { catchError } from 'rxjs/operators';
 export class SectionService {
   sections: SectionModule[];
 
-  private handleError<String> (operation = 'operation', result?: string) {
-    return (error: any): Observable<string> => {
-      return of('server erorr');
-    };
-  }
 
-getSection(): Observable<SectionModule[]> {
-  return this.http.get<SectionModule[]>('assets/section.json').pipe(
-    catchError(this.handleError('getSection', []))
-  );
+getSection(): Observable<SectionModule[]> | Observable<string> {
+  return this.http.get<SectionModule[]>('assets/section.json')
 }
   constructor(private http: HttpClient) {
   }
