@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
-import { StudentDetail } from '../../student.model';
+import { StudentDetail } from '../../models/student.model';
 
 
 @Component({
@@ -34,7 +34,7 @@ export class StudentListTableComponent implements OnInit {
     this.name = selectedStudent.name;
     this.rollNo = selectedStudent.rollNo;
     this.dob = selectedStudent.dob;
-    this.className = selectedStudent.class;
+    this.className = selectedStudent.class.name;
     this.gender = selectedStudent.gender;
     this.address = selectedStudent.address;
     this.contactNo = selectedStudent.contactNo;
@@ -45,7 +45,7 @@ export class StudentListTableComponent implements OnInit {
     this.selectedStudent.name = this.name;
     this.selectedStudent.rollNo = this.rollNo;
     this.selectedStudent.dob = this.dob;
-    this.selectedStudent.class = this.className;
+    this.selectedStudent.class.name = this.className;
     this.selectedStudent.gender = this.gender;
     this.selectedStudent.address = this.address
     this.selectedStudent.contactNo = this.contactNo;
@@ -73,19 +73,19 @@ export class StudentListTableComponent implements OnInit {
   constructor(private snackBar: MatSnackBar) { }
   ngOnInit(): void {
     this.ELEMENT_DATA  = [
-      {rollNo: 1, name: 'Pradeep Kumar Rai', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 2, name: 'Junaid Rafik Shaikh', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 3, name: 'Raghuvir Sigh Rathore', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 4, name: 'Ranjit Kumar Roy', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 5, name: 'Subhashini Roy', class: 'TYBSc', gender: 'female', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 6, name: 'Daizy Kumari', class: 'TYBSc', gender: 'female', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 7, name: 'Trishla Kamra', class: 'TYBSc', gender: 'female', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 8, name: 'Shreyas', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 9, name: 'Praveen Kumar Rai', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 10, name: 'Umesh Shinde', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 11, name: 'Sayali Shinde', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 12, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
-      {rollNo: 13, name: 'Pradeep', class: 'TYBSc', gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"}
+      {rollNo: 1, name: 'Pradeep Kumar Rai', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 2, name: 'Junaid Rafik Shaikh', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 3, name: 'Raghuvir Sigh Rathore', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 4, name: 'Ranjit Kumar Roy', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 5, name: 'Subhashini Roy', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'female', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 6, name: 'Daizy Kumari', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'female', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 7, name: 'Trishla Kamra', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'female', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 8, name: 'Shreyas', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 9, name: 'Praveen Kumar Rai', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 10, name: 'Umesh Shinde', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 11, name: 'Sayali Shinde', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 12, name: 'Pradeep', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"},
+      {rollNo: 13, name: 'Pradeep', class:{ id: 1 ,  name: 'TYBSc'}, gender: 'male', dob: new Date('10-10-2019'), contactNo: '7350397789', address: "Chinchwad"}
     ];
     this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
   }

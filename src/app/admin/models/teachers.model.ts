@@ -1,7 +1,6 @@
-export interface StudentDetail {
-    rollNo: number;
+export interface  TeacherDetail {
+    id: number;
     name: string;
-    class: string;
     gender: string;
     dob: Date;
     contactNo: string;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentDetail } from '../../student.model';
+import { StudentDetail } from '../../models/student.model';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
-import { TeachersDetail } from '../../models/student.model';
+import { TeacherDetail } from '../../models/teachers.model';
 
 @Component({
   selector: 'app-teachers-list-table',
@@ -9,9 +9,9 @@ import { TeachersDetail } from '../../models/student.model';
   styleUrls: ['./teachers-list-table.component.css']
 })
 export class TeachersListTableComponent implements OnInit {
-  ELEMENT_DATA: TeachersDetail[];
+  ELEMENT_DATA: TeacherDetail[];
   displayedColumns: string[] = ['id', 'name', 'contact','edit'];
-  selectedTeacher: TeachersDetail;
+  selectedTeacher: TeacherDetail;
   dataSource: any;
   name: string = null;
   id: number = null;

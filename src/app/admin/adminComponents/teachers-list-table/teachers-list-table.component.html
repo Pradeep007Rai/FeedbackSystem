@@ -10,7 +10,7 @@
     <div class="table-container" *ngIf="name">
       <div class="mat-elevation-z8">
         <div class="container ">
-          <h1>Roll No : {{id}}</h1>
+          <h1>TEACHERS ID : {{id}}</h1>
           <mat-divider></mat-divider>
           <mat-form-field>
             <input matInput placeholder="Name" [(ngModel)]="name">
@@ -44,7 +44,7 @@
     </div>
   </div>
   <div class="col-sm-6">
-      <h2>Student List</h2>
+      <h2>Teachers List</h2>
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Student">
     </mat-form-field>
