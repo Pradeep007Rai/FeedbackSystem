@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
 import { StudentDetail } from '../../models/student.model';
+import { ClassDetail } from '../../models/class.model.';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class StudentListTableComponent implements OnInit {
   contactNo: string = null;
   gender: string = null;
   address: string = null;
+  selectedClass:ClassDetail = null;
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -28,6 +30,14 @@ export class StudentListTableComponent implements OnInit {
       this.dontSave();
     else
       this.selected(this.dataSource._renderData._value[0]);
+  }
+
+  selectClass(){
+    this.selectedClass = { id: 1 ,name: 'TYBSc'};
+  }
+
+  unselectClass(){
+    this.selectedClass = null;
   }
 
   selected(selectedStudent){
@@ -39,6 +49,8 @@ export class StudentListTableComponent implements OnInit {
     this.address = selectedStudent.address;
     this.contactNo = selectedStudent.contactNo;
     this.selectedStudent = selectedStudent;
+
+    console.log("You selected  student with id " +selectedStudent.rollNo +"whose detai are as follow \n"+ JSON.stringify(selectedStudent));
   }
 
   save(){
@@ -49,19 +61,21 @@ export class StudentListTableComponent implements OnInit {
     this.selectedStudent.gender = this.gender;
     this.selectedStudent.address = this.address
     this.selectedStudent.contactNo = this.contactNo;
-    this.dontSave();
+    this.openSnackBar('Updating Student Record .... ',6000);
+    console.log("You are trying to save student with id " +this.selectedStudent.rollNo +"whose detai are as follow \n"+ JSON.stringify(this.selectedStudent));    
     setTimeout(()=>{ this.openSnackBar('Record Updated',2000) }, 5000);
+    this.name = null;
   }
 
   dontSave(){
     this.name = null;
-    this.rollNo = null;
-    this.dob = null;
-    this.className = null;
-    this.gender = null;
-    this.address = null;
-    this.contactNo = null;
-    this.selectedStudent = null;
+    this.openSnackBar('Record Not Updated',3000);
+  }
+
+  delete(){
+    console.log("You are trying to delete student with id " +this.selectedStudent.rollNo +"whose detai are as follow \n"+ JSON.stringify(this.selectedStudent));
+    
+    this.openSnackBar('Deleting Student Record .... ',6000);
   }
   
   openSnackBar(message: string, time: number) {

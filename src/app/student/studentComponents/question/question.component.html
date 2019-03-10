@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<div class="row">
+    <div class="container col-md-12">
+        <div class="jumbotron ">     
+            <h2 class="display-4 ">{{question.question}}</h2>
+          
+          <!-- <div class="stars">
+                <input class="star star-5 sh" id="star-5" type="radio" name=" " value="5"     required />
+                <label class="star star-5 sh" for="star-5"></label>
+                <input class="star star-4 sh" id="star-4" type="radio" name=" " value="4"     required/>
+                <label class="star star-4 sh" for="star-4"></label>
+                <input class="star star-3 sh" id="star-3 "  type="radio" name=" " value="3"    required/>
+                <label class="star star-3  sh" for="star-3 "></label>
+                <input class="star star-2  sh" id="star-2 " type="radio" name=" " value="2"    required/>
+                <label class="star star-2  sh" for="star-2 "></label>
+                <input class="star star-1  sh" id="star-1 " type="radio" name=" " value="1"    required/>
+                <label class="star star-1  sh" for="star-1 "></label>
+          </div>   -->
+          <div class="stars">
+              <input class="star star-5 {{question.questionId}} sh" id="star-5 {{question.questionId}}" type="radio" name="{{question.questionId}}" value="5" [(ngModel)]="question.answer" (change)="onClick()" required />
+              <label class="star star-5 {{question.questionId}} sh" for="star-5 {{question.questionId}}"></label>
+              <input class="star star-4 {{question.questionId}} sh" id="star-4 {{question.questionId}}" type="radio" name="{{question.questionId}}" value="4" [(ngModel)]="question.answer" (change)="onClick()" required/>
+              <label class="star star-4 {{question.questionId}} sh" for="star-4 {{question.questionId}}"></label>
+              <input class="star star-3 {{question.questionId}} sh" id="star-3 {{question.questionId}}"  type="radio" name="{{question.questionId}}" value="3" [(ngModel)]="question.answer" (change)="onClick()" required/>
+              <label class="star star-3 {{question.questionId}} sh" for="star-3 {{question.questionId}}"></label>
+              <input class="star star-2 {{question.questionId}} sh" id="star-2 {{question.questionId}}" type="radio" name="{{question.questionId}}" value="2" [(ngModel)]="question.answer" (change)="onClick()" required/>
+              <label class="star star-2 {{question.questionId}} sh" for="star-2 {{question.questionId}}"></label>
+              <input class="star star-1 {{question.questionId}} sh" id="star-1 {{question.questionId}}" type="radio" name="{{question.questionId}}" value="1" [(ngModel)]="question.answer" (change)="onClick()" required/>
+              <label class="star star-1 {{question.questionId}} sh" for="star-1 {{question.questionId}}"></label>
+        </div>  
+        </div>   
+      </div>
+    </div>

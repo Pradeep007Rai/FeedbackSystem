@@ -6,9 +6,25 @@ table {
   }
 .table-container{
     position: relative;
-    max-height: 400px;
+    max-height: 700px;
     overflow: auto;
 }
+
+.table-container-class{
+  position: relative;
+  height: 250px;
+  overflow: auto;
+}
+.deletebtn{
+  background-color: rgb(236, 94, 94);
+}
+.savebtn{
+  background-color: rgb(47, 255, 75);
+}
+.editbtn{
+  width: 30% !important;
+}
+
 .mat-form-field {
     font-size: 14px;
     width: 100%;
@@ -22,4 +38,8 @@ table {
   button{
     width :33%;
     padding: 1%
+  }
+  
+  .mat-header-cell{
+    font-size: 25px;
   }

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+.jumbotron {
+  background-color: rgba(87, 89, 167,1);
+  color: black;
+  border-radius: 50px !important;
+  padding: 35px 5px;
+  position: sticky;
+}
+
+.section-heading {
+  font-size: 45px !important;
+  border-radius: 50px !important;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 169px!important;
+  letter-spacing: 0px;
+  word-spacing: 1.4px;
+  font-weight: normal;
+  text-decoration: none solid rgb(68, 68, 68);
+  background-color: rgba(87, 89, 167, 0);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  text-align: center;
+  height: 100px;
+  word-wrap:break-word;
+}
+
+h1 {
+  margin: 0;
+  margin-top: -5px;
+  padding-bottom: 40px;
+  font-weight: 100;
+}
+
+.content {
+  width: 113%;
+  background-color: rgba(87, 89, 167,1);
+  padding-top:10px; 
+}
+
+.content .header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(71, 73, 189,0);
+  padding-top: 200px;
+  margin-top: -137px;
+  padding-bottom: 135px;
+}
+
+@media only screen and (max-width: 600px) {
+  .jumbotron {
+    background-color: rgb(87, 89, 167);
+    color: black;
+    border-radius: 50px !important;
+    padding: 35px 5px;
+    margin-left: -25px;
+  }
+  .content .header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(71, 73, 189,0);
+    padding-top: 20px;
+    margin-top: 19px;
+    padding-bottom: 41px;
+  }
+  .section-heading {
+    font-size: 45px !important;
+    border-radius: 50px !important;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 80px!important;
+    letter-spacing: 0px;
+    word-spacing: 1.4px;
+    font-weight: normal;
+    text-decoration: none solid rgb(68, 68, 68);
+    background-color: rgba(87, 89, 167, 1);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-align: center;
+    height: 100px;
+    margin-top:-40px;
+    word-wrap:break-word;
+  }
+
+}

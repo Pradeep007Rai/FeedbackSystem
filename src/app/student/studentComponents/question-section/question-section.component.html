@@ -1,0 +1,10 @@
+<div class="jumbotron content col-xs-12 col-md-12">
+    <div class="container header">
+      <h1 class="section-heading ">{{section.sectionName}}</h1>
+    </div>
+  
+    <div class="content-inner col-md-12">
+    <app-question *ngFor="let quest of section.questions" [question]="quest" (answered)="quest.answer = $event"></app-question>
+  </div>
+  </div>
+  

@@ -5,11 +5,19 @@ import { LoginPageComponent } from './CommonPages/login-page/login-page.componen
 const routes: Routes = [
   {
     path: '',
+    loadChildren: '../student/student.module#StudentModule'
+  },
+  {
+    path: '',
     component: LoginPageComponent
   },
   {
     path: 'admin',
     loadChildren: '../admin/admin.module#AdminModule'
+  },
+  {
+    path: 'student',
+    loadChildren: '../student/student.module#StudentModule'
   },
   {
     path: '**',

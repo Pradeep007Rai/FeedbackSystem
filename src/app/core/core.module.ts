@@ -11,6 +11,7 @@ import { LoginPageComponent } from './CommonPages/login-page/login-page.componen
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { OTPPopup } from './CommonPages/login-page/otp/otp-popup';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [PageNotFoundComponent, LoginPageComponent,OTPPopup],
@@ -20,6 +21,7 @@ import { OTPPopup } from './CommonPages/login-page/otp/otp-popup';
     FormsModule,
     BrowserAnimationsModule,
     CommonModule,
+    HttpClientModule,
     MaterialModule,
   ],
   exports:[

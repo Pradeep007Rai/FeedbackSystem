@@ -1,11 +1,11 @@
 <br>
 <br>
-<div class="row">
+<div class="row" *ngIf="selectedClass">
   <div class="col-sm-6">
     <br>
     <br>
     <div class="table-container" *ngIf="!name">
-      <h1>Click on <mat-icon>edit</mat-icon> to Edit</h1>
+      <h1>Click on <mat-icon>edit</mat-icon> to Edit or<button mat-button (click)="unselectClass(element)">Go Back <mat-icon>arrow_back_ios</mat-icon></button> </h1>
     </div>
     <div class="table-container" *ngIf="name">
       <div class="mat-elevation-z8">
@@ -35,9 +35,9 @@
           Class : {{className}}
           <br>
           <div>
-            <button mat-button (click)="dontSave();openSnackBar('Record Not Updated',3000)">Dont Save</button>
-            <button mat-button (click)="save();openSnackBar('Deleting Student Record .... ',6000)">Delete</button>
-            <button mat-button (click)="save();openSnackBar('Updating Student Record .... ',6000)">Save</button>
+            <button mat-button (click)="dontSave()">Dont Save</button>
+            <button mat-button (click)="delete()">Delete</button>
+            <button mat-button (click)="save()">Save</button>
           </div>
           <br>
         </div>
@@ -85,4 +85,17 @@
       <h1>Dongares Part of Excel this will be replaced by the code </h1>
     </div>    
   </div>
+</div>
+<div *ngIf="!selectedClass">
+    <div class="row">
+      <div class="col-sm-6">
+          <mat-form-field>
+              <mat-select placeholder="SelectClass"  [(ngModel)]="selectedClass">
+                <mat-option value="selectedClass">
+                  TYBSc
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+      </div>
+    </div>
 </div>
